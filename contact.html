@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phúc Xanh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- FontAwesome lib, idk icons -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src ="script.js" defer ></script> 
+</head>
+
+<body>
+    <header>
+        <!-- nav bar -->
+        <nav class="nav-bar">
+            <div class="nav-logo-container">
+                <a href="index.html">
+                    <img src="images/Logo_va_ten_TH_ngang_png.png" style ="width=100px" height = "100px;" alt="Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-items-container">
+                <ul class="nav-items">
+                    <li><a href="category.html">Sản Phẩm</a></li>
+                    <li><a href="aboutus.html">Về Phúc Xanh</a></li>
+                    <li><a href="index.html">Liên Hệ Với Chúng Tôi</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+              <i class="far fa-user" id="user-icon"></i>
+                <div id="login-signup" class="login-signup hidden">
+                    <button class="nav-button" onclick="redirectToLogin()">Log in</button>
+                    <button class="nav-button" onclick="redirectToSignup()">Sign up</button>
+                </div>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+               
+                </a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-items">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="aboutus.html">Về Phúc Xanh</a></li>
+                    <li><a href="category.html">Sản Phẩm</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+      </body>
+      </html>
