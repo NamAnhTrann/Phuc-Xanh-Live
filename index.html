@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phúc Xanh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- FontAwesome lib, idk icons -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src ="script.js" defer ></script> 
+</head>
+
+<body>
+    <header>
+        <!-- nav bar -->
+        <nav class="nav-bar">
+          <div class="nav-logo-container">
+            <a href="index.html">
+              <img src="images/Screenshot 2024-06-28 143437.png" alt="Logo" class="logo">
+            </a>
+          </div>
+          <div class="nav-items-container">
+            <ul class="nav-items">
+              <li><a href="index.html">Trang Chủ</a></li>
+              <li><a href="category.html">Sản Phẩm</a></li>
+              <li><a href="aboutus.html">Về Phúc Xanh</a></li>
+            </ul>
+          </div>
+          <div class="nav-icons">
+            <i class="fas fa-user" id="user-icon"></i>
+            <div id="login-signup" class="login-signup hidden">
+              <button class="nav-button" onclick="redirectToLogin()">Log in</button>
+              <button class="nav-button" onclick="redirectToSignup()">Sign up</button>
+            </div>
+            <a href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart"></i> 
+            </a>
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="nav-menu">
+            <ul class="nav-items">
+              <li><a href="index.html">Trang Chủ</a></li>
+              <li><a href="category.html">Sản Phẩm</a></li>
+              <li><a href="aboutus.html">Về Phúc Xanh</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+<!-- Background header -->
+<section class="background-header">
+    <div class="background-slider"></div>
+    <div class="background-items">
+        <h2>Phúc Xanh</h2>
+        <p>Nâng tầm không gian của bạn với chậu cây tự tưới mới nhất của chúng tôi</p>
+        <button onclick="goToCategory()">Mua Ngay</button>
+    </div>
+</section>
+
+
+    <!-- the functionality section (how it works) -->
+<section class="functionality-container">
+    <h2>Cách thức hoạt động</h2>
+    <div class="functionality-items">
+        <div class="circle-item">
+            <div class="circle">1</div>
+            <p>Đổ đầy bể chứa nước một lần mỗi tháng</p>
+            <img src="images/20240615_112818.jpg" alt="Image 1" class="functionality-image">
+        </div>
+        <div class="circle-item">
+            <div class="circle">2</div>
+            <p>Cây nhận được lượng nước chính xác</p>
+            <img src="images/20240615_112818.jpg" alt="Image 2" class="functionality-image">
+        </div>
+    </div>
+</section>
+
+  <!-- the sizes section for the plantpot -->
+<section class="items-size-display">
+    <h1>Cây Xanh Cho Mọi Không Gian</h1>
+    <p>Khám phá bộ sưu tập cây đa dạng với nhiều loại chậu và kích thước khác nhau!</p>
+    <div class="item-sizes">
+        <a href="category.html" class="item-link">
+            <div class="item-container">
+                <div class="item-img"></div>
+                <img src="images/20240615_112818.jpg" alt="Image 1" class="item-image">
+                <p class="size-desc">Nhỏ</p>
+            </div>
+        </a>
+        
+        <a href="category.html" class="item-link">
+            <div class="item-container">
+                <div class="item-img"></div>
+                <img src="images/20240615_112818.jpg" alt="Image 1" class="item-image">
+                <p class="size-desc">Nhỏ</p>
+            </div>
+        </a>
+        
+        <a href="category.html" class="item-link">
+            <div class="item-container">
+                <div class="item-img"></div>
+                <img src="images/20240615_112818.jpg" alt="Image 1" class="item-image">
+                <p class="size-desc">Nhỏ</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+    <!-- the hot items section -->
+<section class="sale-section">
+    <h1>Sản phẩm mới ra mắt</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="images/20240615_111722.jpg" alt="Image 1">
+            <p class="product-title">MAY MẮN, THÀNH CÔNG, THỊNH VƯỢNG<br>Duổi Công Tảo cao</p>
+            <p class="product-price">300,000₫</p>
+            <button class="add-to-cart">THÊM VÀO GIỎ</button>
+        </div>
+        <div class="grid-item">
+            <img src="images/20240615_112818.jpg" alt="Image 2">
+            <p class="product-title">MAY MẮN, THÀNH CÔNG, THỊNH VƯỢNG<br>Duổi Công Tảo cao</p>
+            <p class="product-price">300,000₫</p>
+            <button class="add-to-cart">THÊM VÀO GIỎ</button>
+        </div>
+        <div class="grid-item">
+            <img src="images/20240615_112818.jpg" alt="Image 3">
+            <p class="product-title">MAY MẮN, TÀI LỘC, THỊNH VƯỢNG<br>Duổi Công trắng cao</p>
+        
+            <p class="product-price">400,000₫</p>
+            <button class="add-to-cart">THÊM VÀO GIỎ</button>
+        </div>
+        <div class="grid-item">
+            <img src="images/20240615_112818.jpg" alt="Image 3">
+            <p class="product-title">MAY MẮN, TÀI LỘC, THỊNH VƯỢNG<br>Duổi Công trắng cao</p>
+          
+            <p class="product-price">400,000₫</p>
+            <button class="add-to-cart">THÊM VÀO GIỎ</button>
+        </div>
+        <div class="grid-item">
+            <img src="images/20240615_112818.jpg" alt="Image 3">
+            <p class="product-title">MAY MẮN, TÀI LỘC, THỊNH VƯỢNG<br>Duổi Công trắng cao</p>
+       
+            <p class="product-price">400,000₫</p>
+            <button class="add-to-cart">THÊM VÀO GIỎ</button>
+        </div>
+
+        <div class="grid-item">
+            <img src="images/20240615_112818.jpg" alt="Image 3">
+            <p class="product-title">MAY MẮN, TÀI LỘC, THỊNH VƯỢNG<br>Duổi Công trắng cao</p>
+       
+            <p class="product-price">400,000₫</p>
+            <button class="add-to-cart">THÊM VÀO GIỎ</button>
+        </div>
+      
+        <!-- Add more grid items as needed -->
+    </div>
+</section>
+
+
+<section class="question-container">
+    <h2>Câu Hỏi Thường Gặp</h2>
+    <div class="question-container-boxes">
+        <div class="container-box">
+            <p>Phúc Xanh cung cấp những loại cây nào?<span class="arrow">&#9660;</span></p>
+            <div class="dropdown-content">
+                <p>Chúng tôi cung cấp nhiều loại cây khác nhau bao gồm cây văn phòng, cây phong thủy, và cây cảnh.</p>
+            </div>
+        </div>
+        <div class="container-box">
+            <p>Phúc Xanh cung cấp những loại cây nào?<span class="arrow">&#9660;</span></p>
+            <div class="dropdown-content">
+                <p>Chúng tôi cung cấp nhiều loại cây khác nhau bao gồm cây văn phòng, cây phong thủy, và cây cảnh.</p>
+            </div>
+        </div>
+        <div class="container-box">
+            <p>Phúc Xanh cung cấp những loại cây nào?<span class="arrow">&#9660;</span></p>
+            <div class="dropdown-content">
+                <p>Chúng tôi cung cấp nhiều loại cây khác nhau bao gồm cây văn phòng, cây phong thủy, và cây cảnh.</p>
+            </div>
+        </div>
+        <div class="container-box">
+            <p>Phúc Xanh cung cấp những loại cây nào?<span class="arrow">&#9660;</span></p>
+            <div class="dropdown-content">
+                <p>Chúng tôi cung cấp nhiều loại cây khác nhau bao gồm cây văn phòng, cây phong thủy, và cây cảnh.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+   <!-- the section above the footer where it talks about the good things about the business -->
+<div class="icon-container">
+    <div class="icon-item">
+        <i class="fas fa-comments"></i>
+        <h3>Hỗ trợ nhanh chóng</h3>
+        <p>Hotline 0988.217.988, rất vui được hỗ trợ bạn với niềm hạnh phúc và yêu thương</p>
+    </div>
+    <div class="icon-item">
+        <i class="fas fa-cube"></i>
+        <h3>Đóng góp thiện nguyện</h3>
+        <p>Tất cả các đơn hàng được mua đã đóng góp 5% xây cầu từ thiện tặng bà con miền Tây</p>
+    </div>
+    <div class="icon-item">
+        <i class="fas fa-th-large"></i>
+        <h3>Lựa chọn dễ dàng</h3>
+        <p>Đa dạng loại cây, kiểu màu trang trí, phù hợp ngân sách và nhu cầu riêng</p>
+    </div>
+    <div class="icon-item">
+        <i class="fas fa-heart"></i>
+        <h3>Chăm sóc mối quan hệ</h3>
+        <p>Món quà xanh mang phúc lành cho người trao và người nhận</p>
+    </div>
+</div>
+
+
+<!-- the footer -->
+<footer class="footer">
+    <div class="footer-top">
+      <div class="newsletter-section">
+        <h2>Đăng ký nhận tin</h2>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Nhập email của bạn" />
+          <button type="submit">ĐĂNG KÝ</button>
+        </form>
+      </div>
+      <div class="social-media-section">
+        <h2>Kết nối với chúng tôi</h2>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-section">
+        <h2>Về Phúc Xanh</h2>
+        <p>262 Huỳnh Văn Bánh, phường 11, quận Phú Nhuận, Tp. Hồ Chí Minh</p>
+        <p>0988.217.988</p>
+        <p>info.phucxanh@gmail.com</p>
+      </div>
+      <div class="footer-section">
+        <h2>Hỗ trợ khách hàng</h2>
+        <ul>
+          <li><a href="#">Sản phẩm khuyến mãi</a></li>
+          <li><a href="#">Sản phẩm nổi bật</a></li>
+          <li><a href="#">Tất cả sản phẩm</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Liên kết</h2>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Sản phẩm</a></li>
+          <li><a href="#">Quy trình</a></li>
+          <li><a href="#">Chia sẻ</a></li>
+          <li><a href="#">Phúc Xanh</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Chính sách</h2>
+        <ul>
+          <li><a href="#">Tìm kiếm</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Chính sách đối trả</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+
+
+
+
+</body>
+</html>
