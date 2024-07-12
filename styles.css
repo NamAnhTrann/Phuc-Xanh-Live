@@ -62,6 +62,7 @@ ul {
 }
 
 #user-icon {
+  font-size: 30px; /* Adjust this value to make the user icon larger */
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 10px;
@@ -107,8 +108,14 @@ ul {
 
 .logo {
   height: 50px;
-  transition: transform var(--transition-speed);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
+
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: var(--neumorph-shadow);
+}
+
 
 .nav-items-container {
   display: flex;
@@ -179,6 +186,9 @@ ul {
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.cart-link i {
+  color: var(--primary-color);
 }
 
 .cart-link:hover {
@@ -273,6 +283,10 @@ ul {
   .nav-items li {
     margin: 10px 0;
   }
+}
+.nav-icon, .cart-link i {
+  font-size: 30px; /* Adjust this value to make the icons larger */
+  transition: font-size var(--transition-speed);
 }
 
 
