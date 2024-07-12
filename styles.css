@@ -36,7 +36,7 @@
   }
   
   /* Navigation bar */
-/* Navigation bar */
+
 .nav-bar {
     position: relative;
     display: flex;
@@ -381,7 +381,7 @@
   }
   
   .items-size-display p {
-    font-size: 2vh;
+    font-size: 3vh;
     margin-bottom: 3vh;
     color: #666;
   }
@@ -399,13 +399,35 @@
   }
   
   .item-container .size-desc {
+    position: relative;
+    display: inline-block;
     color: rgb(55, 84, 55);
     transition: color 0.3s ease;
+    font-size:3vh;
+  }
+  
+  .item-container .size-desc::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Adjust the thickness of the underline here */
+    bottom: -2px; /* Adjust based on the desired distance from the text */
+    left: 0;
+    background-color: rgb(55, 84, 55);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
   }
   
   .item-container:hover .size-desc {
-    color: rgb(74, 148, 54);
+    color: rgb(64, 132, 46);
   }
+  
+  .item-container:hover .size-desc::before {
+    visibility: visible;
+    width: 100%;
+    background-color: rgb(74, 148, 54); /* Match the color on hover */
+  }
+  
   
   .item-image {
     width: 100%;
@@ -490,6 +512,8 @@
   .question-container {
     max-width: 80vh;
     margin: 0 auto;
+    margin-top:8vh;
+    margin-bottom:8vh;
     padding: 2vh;
     border: 0.1vh solid #ccc;
     border-radius: 0.8vh;
@@ -557,24 +581,23 @@
   }
   
   .icon-item i {
-    font-size: 2vh;
+    font-size: 5vh;
     color: rgb(55, 84, 55);
     margin-bottom: 1vh;
   }
   
   .icon-item h3 {
-    font-size: 2vh;
+    font-size: 2.5vh;
     color: rgb(55, 84, 55);
     margin-bottom: 1vh;
   }
   
   .icon-item p {
-    font-size: 2vh;
+    font-size: 2.5vh;
     color: #666;
   }
   
   /* Footer styles */
-/* Footer styles */
 .footer {
     background-color: var(--footer-background-color);
     padding: 4vh 4vw;
@@ -612,13 +635,15 @@
   }
   
   .newsletter-form input[type="email"] {
-    padding: 2vh 3vw;
+    padding: 2vh 1vw;
+    text-align: center;;
     border: none;
     border-radius: 2.5vh;
     margin-bottom: 2vh;
     font-size: 2vh;
     outline: none;
     box-shadow: 0 0.5vh rgba(0, 0, 0, 0.1);
+    width:20vw;
   }
   
   .newsletter-form button {
@@ -723,12 +748,29 @@
   }
   
   .footer-section ul li a {
+    position: relative;
+    display: inline-block;
     color: #666;
+    text-decoration: none;
   }
   
-  .footer-section ul li a:hover {
-    color: #000;
-    transition: 0.5s;
+  .footer-section ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    bottom: 0;
+    left: 0;
+    background-color:  rgb(55, 84, 55);;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+
+  }
+  
+  .footer-section ul li a:hover::before {
+    visibility: visible;
+    width: 100%;
+
   }
   
   .footer-section address {
