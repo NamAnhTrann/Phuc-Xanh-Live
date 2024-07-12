@@ -78,6 +78,7 @@
     z-index: 1000;
   }
   
+  
   .login-signup.show {
     display: flex;
   }
@@ -141,7 +142,7 @@
   }
   
   .nav-button:hover {
-    background-color: var(--highlight-hover-color);
+    background-color: rgb(55, 84, 55);;
   }
   
   .cart-link {
@@ -315,56 +316,89 @@
     color: white;
   }
   
-  /* Functionality section */
-  .functionality-container {
-    text-align: center;
-    padding: 4vh;
-    background-color: var(--light-background-color);
-  }
-  
-  .functionality-container h2 {
-    font-size: 4vh;
-    margin-bottom: 2vh;
-    font-weight: normal;
-    color: var(--secondary-color);
-  }
-  
-  .functionality-items {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2vh;
-  }
-  
-  .circle-item {
-    text-align: center;
-    width: 30vh;
-  }
-  
-  .circle {
-    width: 5vh;
-    height: 5vh;
-    border-radius: 50%;
-    background-color: rgb(255, 252, 249);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vh;
-    margin: 0 auto 1vh;
-    font-weight: bold;
-  }
-  
-  .circle-item p {
-    font-size: 2vh;
-    margin: 1vh 0 2vh;
-    color: #666;
-  }
-  
-  .functionality-image {
-    width: 100%;
-    height: auto;
-    border-radius: 1vh;
-  }
+
+/* Functionality section */
+.functionality-container {
+  text-align: center;
+  padding: 8vh 4vw; /* Increased padding for more space */
+  background-color: var(--light-background-color);
+}
+
+.functionality-container h2 {
+  font-size: 4vh;
+  margin-bottom: 4vh; /* Increased margin for more space */
+  font-weight: normal;
+  color: var(--secondary-color);
+}
+
+.functionality-items {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 4vw; /* Increased gap between items */
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.circle-item {
+  text-align: center;
+  width: calc(50% - 2vw); /* Adjust width to fit two items per row with a gap */
+  max-width: 40vh; /* Set maximum width for items */
+  margin-bottom: 4vh; /* Add margin to bottom for spacing */
+}
+
+.circle {
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  background-color: rgb(255, 252, 249);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vh;
+  margin: 0 auto 2vh;
+  font-weight: bold;
+}
+
+.circle-item p {
+  font-size: 2.5vh;
+  margin: 2vh 0 4vh; /* Increased margin for more space */
+  color: #666;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.circle-item p::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* Adjust the thickness of the underline here */
+  bottom: -2px; /* Adjust based on the desired distance from the text */
+  left: 0;
+  background-color: rgb(55, 84, 55);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.circle-item:hover p {
+  color: rgb(64, 132, 46);
+}
+
+.circle-item:hover p::before {
+  visibility: visible;
+  width: 100%;
+  background-color: rgb(74, 148, 54); /* Match the color on hover */
+}
+
+.functionality-image {
+  width: 100%;
+  max-width: 60vh; /* Set maximum width for images */
+  height: auto;
+  border-radius: 1vh;
+}
+
+
+
   
   /* Sizes section */
   .items-size-display {
