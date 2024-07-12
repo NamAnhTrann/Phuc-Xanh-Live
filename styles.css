@@ -329,6 +329,19 @@
   margin-bottom: 4vh; /* Increased margin for more space */
   font-weight: normal;
   color: var(--secondary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.functionality-container h2::after {
+  content: '';
+  display: block;
+  width: 100%; /* Adjusted width for a smaller line */
+  height: 2px; /* Adjust the thickness of the line */
+  background: #666; /* Adjust the color of the line */
+  position: absolute;
+  bottom: -10px; /* Adjust the distance from the text */
+  border-bottom: 2px dotted #666; /* Dotted line */
 }
 
 .functionality-items {
@@ -396,6 +409,7 @@
   height: auto;
   border-radius: 1vh;
 }
+
 
 
 
