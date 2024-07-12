@@ -44,6 +44,31 @@ $(document).ready(function() {
             loginSignup.classList.remove('show');
         }
     });
+
+    // Handle login form submission
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const rememberMe = document.getElementById('remember-me').checked;
+
+            if (localStorage.getItem('email') === email && localStorage.getItem('password') === password) {
+                alert('Login successful!');
+                if (rememberMe) {
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('password', password);
+                } else {
+                    localStorage.removeItem('email');
+                    localStorage.removeItem('password');
+                }
+                window.location.href = 'index.html'; // Redirect to index.html after successful login
+            } else {
+                alert('Invalid email or password');
+            }
+        });
+    }
 });
 
 // Redirect functions
@@ -59,9 +84,40 @@ function redirectToSignup() {
 function goToCategory() {
     window.location.href = 'category.html'; // Adjust as necessary for your category page
 }
-const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
 
-  hamburger.addEventListener('click', () => {
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-  });
+});
+
+// Toggle password visibility
+const togglePasswordButton = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
+
+if (togglePasswordButton && passwordInput) {
+    togglePasswordButton.addEventListener('click', function() {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        this.textContent = type === 'password' ? 'Show' : 'Hide';
+    });
+}
+
+// Handle signup form submission
+const signupForm = document.querySelector('.login-box');
+if (signupForm) {
+    signupForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        if (email && password) {
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+            alert('Signup successful!');
+            window.location.href = 'login.html';
+        } else {
+            alert('Please fill in all fields.');
+        }
+    });
+}
