@@ -557,62 +557,76 @@
   }
   
   /* FAQ section */
-  .question-container {
-    max-width: 80vh;
-    margin: 0 auto;
-    margin-top:8vh;
-    margin-bottom:8vh;
-    padding: 2vh;
-    border: 0.1vh solid #ccc;
-    border-radius: 0.8vh;
-  }
-  
-  .question-container h2 {
-    text-align: center;
-  }
-  
-  .question-container-boxes {
-    margin-top: 2vh;
-  }
-  
-  .container-box {
-    background: #f9f9f9;
-    margin-bottom: 1vh;
-    padding: 1vh;
-    border-radius: 0.5vh;
-    cursor: pointer;
-    border: 0.1vh solid #ddd;
-    position: relative;
-  }
-  
-  .container-box p {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    padding: 0 1vh;
-  }
-  
-  .container-box.active .dropdown-content {
-    max-height: 20vh;
-    padding: 1vh;
-  }
-  
-  .arrow {
-    font-size: 1.2em;
-    margin-left: auto;
-    transition: transform 0.3s ease-out;
-  }
-  
-  .container-box.active .arrow {
-    transform: rotate(180deg);
-  }
+.question-container {
+  max-width: 80vh;
+  margin: 8vh auto;
+  padding: 4vh 4vh;
+  border: 0.1vh solid #ccc;
+  border-radius: 0.8vh;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.question-container h2 {
+  text-align: center;
+  font-size: 3vh;
+  color: var(--secondary-color);
+  margin-bottom: 4vh;
+}
+
+.question-container-boxes {
+  margin-top: 2vh;
+}
+
+.container-box {
+  background: #f1f1f1;
+  margin-bottom: 2vh;
+  padding: 2vh;
+  border-radius: 0.8vh;
+  cursor: pointer;
+  border: 0.1vh solid #ddd;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-box:hover {
+  background: #e7e7e7;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+}
+
+.container-box p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.2vh;
+  color: var(--primary-color);
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 1vh;
+  font-size: 2vh;
+  color: #666;
+}
+
+.container-box.active .dropdown-content {
+  max-height: 20vh;
+  padding: 1vh;
+}
+
+.arrow {
+  font-size: 2.4vh;
+  margin-left: auto;
+  transition: transform 0.3s ease-out;
+}
+
+.container-box.active .arrow {
+  transform: rotate(180deg);
+}
+
   
   /* Icon container section */
   .icon-container {
