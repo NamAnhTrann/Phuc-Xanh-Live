@@ -112,8 +112,9 @@ ul {
 
 .nav-items-container {
   display: flex;
-  justify-content: center; /* Center the nav items */
+  justify-content: flex-start; /* Align items to the left */
   flex-grow: 1;
+  margin-left:5.5vw;
 }
 
 .nav-items {
