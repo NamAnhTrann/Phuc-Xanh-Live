@@ -605,6 +605,7 @@ ul {
 }
 
 .add-to-cart {
+  display: inline-block;
   padding: 1.5vh 3vw;
   font-size: 2vh;
   font-weight: bold;
@@ -614,6 +615,8 @@ ul {
   border-radius: 0.5vh;
   cursor: pointer;
   margin-top: 1vh;
+  text-align: center;
+  text-decoration: none; /* Ensures the text has no underline */
   transition: background var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
@@ -622,6 +625,7 @@ ul {
   transform: scale(1.05);
   box-shadow: var(--neumorph-shadow);
 }
+
 
 /* FAQ section */
 .question-container {
