@@ -47,10 +47,10 @@ ul {
 .nav-bar {
   position: fixed;
   top: 0;
-  left: 0; /* Ensures the nav bar starts from the left edge */
-  right: 0; /* Ensures the nav bar spans to the right edge */
-  max-width: 95%; /* Limits the max width of the nav bar */
-  margin: 0 auto; /* Centers the nav bar */
+  left: 0;
+  right: 0;
+  max-width: 95%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +62,7 @@ ul {
 }
 
 #user-icon {
-  font-size: 30px; /* Adjust this value to make the user icon larger */
+  font-size: 30px;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 10px;
@@ -111,17 +111,12 @@ ul {
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.logo:hover {
-  transform: scale(1.05);
-  box-shadow: var(--neumorph-shadow);
-}
-
 
 .nav-items-container {
   display: flex;
-  justify-content: flex-start; /* Align items to the left */
+  justify-content: flex-start;
   flex-grow: 1;
-  margin-left:5.5vw;
+  margin-left: 5.5vw;
 }
 
 .nav-items {
@@ -181,13 +176,14 @@ ul {
 .cart-link {
   display: flex;
   align-items: center;
-  color: #333;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
 }
+
 .cart-link i {
+  font-size: 30px;
   color: var(--primary-color);
 }
 
@@ -196,6 +192,10 @@ ul {
   color: white;
   transform: translateY(-2px);
   box-shadow: var(--neumorph-shadow);
+}
+
+.cart-link:hover i {
+  color: white;
 }
 
 .hamburger {
@@ -284,14 +284,6 @@ ul {
     margin: 10px 0;
   }
 }
-.nav-icon, .cart-link i {
-  font-size: 30px; /* Adjust this value to make the icons larger */
-  transition: font-size var(--transition-speed);
-}
-
-
-
-
 
 /* Background header */
 .background-header {
@@ -362,8 +354,7 @@ ul {
 .background-items button:hover {
   background-color: var(--highlight-hover-color);
   transform: scale(1.05);
-  color:white;
- 
+  color: white;
 }
 
 /* Functionality section */
@@ -465,6 +456,7 @@ ul {
   height: auto;
   border-radius: 1vh;
   transition: transform var(--transition-speed);
+ 
 }
 
 .functionality-image:hover {
@@ -973,7 +965,7 @@ ul {
 .footer-copyright {
   text-align: center;
   padding: 10px 0;
-  background-color: var(--footer-background-color);
+  background-color: var (--footer-background-color);
   font-size: 14px;
   color: #666;
 }
