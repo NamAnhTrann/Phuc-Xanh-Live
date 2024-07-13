@@ -32,6 +32,7 @@ body {
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
+
 a {
   color: inherit;
   text-decoration: none;
@@ -45,7 +46,7 @@ ul {
 
 /* Navigation bar */
 .nav-bar {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -399,6 +400,11 @@ ul {
   flex-wrap: wrap;
 }
 
+.item-purchase-colors {
+  display:flex;
+  
+}
+
 .circle-item {
   text-align: center;
   width: calc(50% - 2vw);
@@ -455,6 +461,7 @@ ul {
   background-color: var(--highlight-color);
   transform: scale(1.1);
   box-shadow: var(--neumorph-shadow);
+  color:white;
 }
 
 .functionality-image {
