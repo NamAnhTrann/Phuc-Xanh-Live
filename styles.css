@@ -929,6 +929,42 @@ ul {
   font-family: inherit;
 }
 
+/*gift wrapping styles*/
+.gift-wrapping {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+
+}
+
+.gift-wrapping-images img {
+  width:300px;
+  height:200px;
+}
+
+.gift-wrapping-details{
+  margin-left:30px;
+  text-align:center;
+}
+
+.gift-wrapping-detail h1 {
+  font-size:25px;
+  font-weight:bold;
+}
+
+.gift-wrapping-details p {
+  font-size:16px;
+  font-weight:bold;
+
+}
+
+.gift-wrapping-details button {
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+
 /* Footer styles */
 .footer {
   background-color: var(--footer-background-color);
