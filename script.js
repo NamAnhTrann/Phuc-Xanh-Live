@@ -6,6 +6,8 @@ var images = [
 ];
 var nextImage = 1;
 
+
+//extremely readable code btw Andrew, i dont even know what the fuck im writing (youtube)
 function doSlideshow() {
     if (nextImage >= images.length) {
         nextImage = 0;
